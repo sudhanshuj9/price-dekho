@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 45%;
+        }
+
+        .product h2 {
+            margin-bottom: 10px;
+        }
+
+        .product .name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product .price {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .product .buy-link {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 10px;
+            background-color: #4285F4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .affordable {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .affordable h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Search Results</h1>
+
+    <div class="result">
+        <div class="product">
+            <h2>Flipkart</h2>
+            <div class="name">{{ flipkart_name }}</div>
+            <div class="price">Price: ₹{{ flipkart_price }}</div>
+            {% if flipkart_url %}
+            <a href="{{ flipkart_url }}" class="buy-link" target="_blank">Buy on Flipkart</a>
+            {% endif %}
+        </div>
+        <div class="product">
+            <h2>Amazon</h2>
+            <div class="name">{{ amazon_name }}</div>
+            <div class="price">Price: ₹{{ amazon_price }}</div>
+            {% if amazon_url %}
+            <a href="{{ amazon_url }}" class="buy-link" target="_blank">Buy on Amazon</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="affordable">
+        <h2>Most Affordable Website:</h2>
+        <div>{{ affordable_website }}</div>
+    </div>
+</body>
+</html>

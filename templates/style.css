@@ -1,0 +1,81 @@
+/* style.css */
+
+/* Core Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.signin-container, .register-container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+.button-primary:hover {
+    background-color: #b10000;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Other Styling */
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.signin-link, .register-link {
+    margin-top: 10px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .container, .signin-container, .register-container {
+        width: 90%;
+    }
+}
